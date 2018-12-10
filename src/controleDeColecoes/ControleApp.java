@@ -22,7 +22,15 @@ public class ControleApp extends JFrame {
 		fachadaColecao.inserirLivroTitulo("A mãe de Deus nos conduz");
 		
 		SQLColecao tabela = new SQLColecao();
-		tabela.inserir(fachadaColecao);
+		tabela.inserir(fachadaColecao, "Livro");
+		
+		fachadaColecao.inserirFilmeAno(2018);
+		fachadaColecao.inserirFilmeEmprestado(true);
+		fachadaColecao.inserirFilmeGenero("Suspense");
+		fachadaColecao.inserirFilmeId(1);
+		fachadaColecao.inserirFilmeNome("Sexto Período");
+		
+		tabela.inserir(fachadaColecao, "Filme");
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

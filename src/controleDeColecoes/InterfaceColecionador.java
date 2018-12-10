@@ -1,6 +1,6 @@
 package controleDeColecoes;
 
 public interface InterfaceColecionador {
-	public void inserir(ColecoesFacade colecoes);
+	public void inserir(ColecoesFacade colecoes, String tipo);
 	
 }

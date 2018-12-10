@@ -2,7 +2,8 @@ package controleDeColecoes;
 
 public class ColecoesFacade {
 	
-	protected ColecaoLivro livro;
+	protected ColecaoLivros livro;
+	protected ColecaoFilmes filme;
 	
 	// Metodos para adição de Livros ao Banco de Dados
 	public void inserirLivroTitulo(String titulo) {
@@ -35,5 +36,46 @@ public class ColecoesFacade {
 	
 	public boolean livroEmprestadoBD() {
 		return livro.isEmprestado();
+	}
+	
+	//Metodos para adição de Filmes no Banco de Dados
+	public void inserirFilmeNome(String nome) {
+		filme.setNome(nome);
+	}
+	
+	public void inserirFilmeGenero(String genero) {
+		filme.setGenero(genero);
+	}
+	
+	public void inserirFilmeId(int id) {
+		filme.setId(id);
+	}
+	
+	public void inserirFilmeEmprestado(boolean emprestado) {
+		filme.setEmprestado(emprestado);
+	}
+	
+	public void inserirFilmeAno(int ano) {
+		filme.setAno(ano);
+	}
+	
+	public String filmeNomeBD() {
+		return filme.getNome();
+	}
+	
+	public String filmeGeneroBD() {
+		return filme.getGenero();
+	}
+	
+	public int filmeIdBD() {
+		return filme.getId();
+	}
+	
+	public boolean filmeEmprestadoBD() {
+		return filme.isEmprestado();
+	}
+	
+	public int filmeAnoBD() {
+		return filme.getAno();
 	}
 }
