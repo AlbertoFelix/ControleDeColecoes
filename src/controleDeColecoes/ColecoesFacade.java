@@ -1,81 +1,83 @@
 package controleDeColecoes;
 
+import java.sql.Date;
+
 public class ColecoesFacade {
 	
-	protected ColecaoLivros livro;
-	protected ColecaoFilmes filme;
+	protected Colecionador colecionador;
+	protected Colecao colecao;
+	protected Emprestimo objeto;
 	
-	// Metodos para adição de Livros ao Banco de Dados
-	public void inserirLivroTitulo(String titulo) {
-		livro.setTitulo(titulo);
+	//Métodos do colecionador
+	public void loginColecionador(String login) {
+		colecionador.setLogin(login);
 	}
 	
-	public void inserirLivroAutor(String autor) {
-		livro.setAutor(autor);
+	public void senhaColecionador(String senha) {
+		colecionador.setSenha(senha);
 	}
 	
-	public void inserirLivroId(int id) {
-		livro.setId(id);
+	public String colecionadorLogin() {
+		return colecionador.getLogin();
 	}
 	
-	public void inserirLivroEmprestado(boolean emprestado) {
-		livro.setEmprestado(emprestado);
+	public String colecionadorSenha() {
+		return colecionador.getSenha();
 	}
 	
-	public String livroTituloBD() {
-		return livro.getTitulo();
+	//Métodos da coleção
+	public void objeto_colecao(String objeto_colecao) {
+		colecao.setObjeto_colecao(objeto_colecao);
 	}
 	
-	public String livroAutorBD() {
-		return livro.getAutor();
+	public void nome_objeto(String nome) {
+		colecao.setNome(nome);
 	}
 	
-	public int livroIdBD() {
-		return livro.getId();
+	public void autor_objeto(String autor) {
+		colecao.setAutor(autor);
 	}
 	
-	public boolean livroEmprestadoBD() {
-		return livro.isEmprestado();
+	public void ano_objeto(int ano) {
+		colecao.setAno(ano);
 	}
 	
-	//Metodos para adição de Filmes no Banco de Dados
-	public void inserirFilmeNome(String nome) {
-		filme.setNome(nome);
+	public void situacao_objeto(boolean situacao) {
+		colecao.setSituacao(situacao);
 	}
 	
-	public void inserirFilmeGenero(String genero) {
-		filme.setGenero(genero);
+	public String colecao_objeto() {
+		return colecao.getObjeto_colecao();
 	}
 	
-	public void inserirFilmeId(int id) {
-		filme.setId(id);
+	public String objeto_nome() {
+		return colecao.getNome();
 	}
 	
-	public void inserirFilmeEmprestado(boolean emprestado) {
-		filme.setEmprestado(emprestado);
+	public String objeto_autor() {
+		return colecao.getAutor();
 	}
 	
-	public void inserirFilmeAno(int ano) {
-		filme.setAno(ano);
+	public int objeto_ano() {
+		return colecao.getAno();
 	}
 	
-	public String filmeNomeBD() {
-		return filme.getNome();
+	public boolean objeto_situacao() {
+		return colecao.isSituacao();
 	}
 	
-	public String filmeGeneroBD() {
-		return filme.getGenero();
+	//Métodos empréstimo
+	public void nome_pessoa_emprestimo(String nome) {
+		objeto.setNome_pessoa(nome);
 	}
 	
-	public int filmeIdBD() {
-		return filme.getId();
+	public void endereco_pessoa_emprestimo(String endereco) {
+		objeto.setEndereco(endereco);
 	}
 	
-	public boolean filmeEmprestadoBD() {
-		return filme.isEmprestado();
+	public void data_emprestimo(Date data_emprestimo) {
+		objeto.setData_emprestimo(data_emprestimo);
 	}
 	
-	public int filmeAnoBD() {
-		return filme.getAno();
-	}
+	
 }
